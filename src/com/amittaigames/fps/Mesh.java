@@ -16,9 +16,9 @@ public class Mesh {
 
 	/**
 	 * Container for rendering objects
-	 * @param position - vertices for position
-	 * @param color - vertices for color
-	 * @param normals - vertices for normals
+	 * @param position vertices for position
+	 * @param color vertices for color
+	 * @param normals vertices for normals
 	 */
 	public Mesh(float[] position, float[] color, float[] normals) {
 		this.position = position;
@@ -47,7 +47,7 @@ public class Mesh {
 
 	/**
 	 * Update position vertices (e.g., translate mesh)
-	 * @param pos - Position vertices
+	 * @param pos Position vertices
 	 */
 	public void updatePosition(float[] pos) {
 		FloatBuffer buf = Buffers.createFloatBuffer(pos);
@@ -58,7 +58,7 @@ public class Mesh {
 
 	/**
 	 * Update color vertices
-	 * @param color - Color vertices
+	 * @param color Color vertices
 	 */
 	public void updateColor(float[] color) {
 		FloatBuffer buf = Buffers.createFloatBuffer(color);

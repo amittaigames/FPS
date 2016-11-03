@@ -14,10 +14,10 @@ public class Window {
 
 	/**
 	 * Creates a single-instance window for the game to be rendered on
-	 * @param width - Window width
-	 * @param height - Window height
-	 * @param title - Window title
-	 * @param game - CoreGame implementation
+	 * @param width Window width
+	 * @param height Window height
+	 * @param title Window title
+	 * @param game CoreGame implementation
 	 */
 	public static void init(int width, int height, String title, CoreGame game) {
 		if (!glfwInit()) {
@@ -46,10 +46,10 @@ public class Window {
 
 	/**
 	 * Sets up OpenGL for rendering (params are for frustum calculations)
-	 * @param fov - Field of view
-	 * @param aspect - Aspect ratio (width/height)
-	 * @param zNear - Z near rendering plane
-	 * @param zFar - Z far rendering plane
+	 * @param fov Field of view
+	 * @param aspect Aspect ratio (width/height)
+	 * @param zNear Z near rendering plane
+	 * @param zFar Z far rendering plane
 	 */
 	private static void setupOpenGL(float fov, float aspect, float zNear, float zFar) {
 		glMatrixMode(GL_PROJECTION);
