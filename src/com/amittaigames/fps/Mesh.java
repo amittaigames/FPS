@@ -39,9 +39,9 @@ public class Mesh {
 
 		// Probably won't update normals
 		this.vNormal = glGenBuffers();
-		FloatBuffer buf = Buffers.createFloatBuffer(this.normals);
+		FloatBuffer nbuf = Buffers.createFloatBuffer(this.normals);
 		glBindBuffer(GL_ARRAY_BUFFER, this.vNormal);
-		glBufferData(GL_ARRAY_BUFFER, buf, GL_STATIC_DRAW);
+		glBufferData(GL_ARRAY_BUFFER, nbuf, GL_STATIC_DRAW);
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 	}
 
@@ -90,4 +90,5 @@ public class Mesh {
 	public int getNormalBuffer() {
 		return vNormal;
 	}
+
 }

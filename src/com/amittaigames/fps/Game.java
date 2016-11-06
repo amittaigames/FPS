@@ -2,6 +2,8 @@ package com.amittaigames.fps;
 
 public class Game extends CoreGame {
 
+	private Model cube;
+
 	/**
 	 * Main method for entry
 	 * @param args Not used
@@ -15,7 +17,7 @@ public class Game extends CoreGame {
 	 */
 	@Override
 	public void init() {
-
+		cube = new Model(0, 0, -5, "/models/Cube.obj");
 	}
 
 	/**
@@ -25,6 +27,7 @@ public class Game extends CoreGame {
 	@Override
 	public void render(Render r) {
 		r.clear(0, 0, 0);
+		r.drawModel(cube);
 	}
 
 	/**
@@ -33,7 +36,8 @@ public class Game extends CoreGame {
 	 */
 	@Override
 	public void update(float delta) {
-
+		cube.rotate(2.5f * delta, 1, 1, 1);
+		cube.translate(0.025f * delta, 0, 0);
 	}
 
 	/**

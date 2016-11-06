@@ -62,6 +62,16 @@ public class Window {
 
 		glMatrixMode(GL_MODELVIEW);
 		glLoadIdentity();
+
+		glEnable(GL_DEPTH_TEST);
+		glDepthFunc(GL_LEQUAL);
+		glShadeModel(GL_SMOOTH);
+		glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
+		glEnable(GL_NORMALIZE);
+
+		glEnable(GL_LIGHTING);
+		glEnable(GL_COLOR_MATERIAL);
+		glEnable(GL_LIGHT0);
 	}
 
 	/**
