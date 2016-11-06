@@ -18,6 +18,7 @@ public class Game extends CoreGame {
 	@Override
 	public void init() {
 		cube = new Model(0, 0, -5, "/models/Cube.obj");
+		cube.setColor(0, 255, 128);
 	}
 
 	/**
@@ -37,7 +38,6 @@ public class Game extends CoreGame {
 	@Override
 	public void update(float delta) {
 		cube.rotate(2.5f * delta, 1, 1, 1);
-		cube.translate(0.025f * delta, 0, 0);
 	}
 
 	/**
@@ -45,7 +45,7 @@ public class Game extends CoreGame {
 	 */
 	@Override
 	public void cleanUp() {
-
+		cube.delete();
 	}
 
 }

@@ -67,6 +67,16 @@ public class Mesh {
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 	}
 
+	/**
+	 * Cleans up OpenGL buffers
+	 * @see CoreGame#cleanUp()
+	 */
+	public void delete() {
+		glDeleteBuffers(vPos);
+		glDeleteBuffers(vColor);
+		glDeleteBuffers(vNormal);
+	}
+
 	public float[] getPosition() {
 		return position;
 	}

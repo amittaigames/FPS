@@ -79,6 +79,21 @@ public class Model {
 	}
 
 	/**
+	 * Set model color
+	 * @param r Red color component
+	 * @param g Green color component
+	 * @param b Blue color component
+	 */
+	public void setColor(int r, int g, int b) {
+		for (int i = 0; i < color.length; i += 3) {
+			color[i] = (float)r/255.0f;
+			color[i + 1] = (float)g/255.0f;
+			color[i + 2] = (float)b/255.0f;
+		}
+		mesh.updateColor(color);
+	}
+
+	/**
 	 * Actual method for loading in the model data
 	 * @param path Path to model
 	 */
@@ -177,6 +192,14 @@ public class Model {
 		this.mesh = new Mesh(fposition, colors, fnormals);
 		this.position = fposition;
 		this.color = colors;
+	}
+
+	/**
+	 * Deletes mesh data
+	 * @see Mesh#delete()
+	 */
+	public void delete() {
+		this.mesh.delete();
 	}
 
 	public float getX() {
