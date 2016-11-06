@@ -38,6 +38,8 @@ public class Window {
 
 		setupOpenGL(60.0f, (float)width/(float)height, 0.1f, 1000f);
 
+		Input.init(window);
+
 		Window.game = game;
 		Window.render = new Render();
 

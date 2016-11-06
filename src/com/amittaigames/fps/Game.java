@@ -37,7 +37,26 @@ public class Game extends CoreGame {
 	 */
 	@Override
 	public void update(float delta) {
-		cube.rotate(2.5f * delta, 1, 1, 1);
+		cube.rotate(5f * delta, 1, 1, 1);
+
+		if (Input.isKeyDown(Input.KEY_D)) {
+			cube.translate(0.25f * delta, 0, 0);
+		}
+		if (Input.isKeyDown(Input.KEY_A)) {
+			cube.translate(-0.25f * delta, 0, 0);
+		}
+		if (Input.isKeyDown(Input.KEY_W)) {
+			cube.translate(0, 0.25f * delta, 0);
+		}
+		if (Input.isKeyDown(Input.KEY_S)) {
+			cube.translate(0, -0.25f * delta, 0);
+		}
+		if (Input.isKeyDown(Input.KEY_UP)) {
+			cube.translate(0, 0, -0.25f * delta);
+		}
+		if (Input.isKeyDown(Input.KEY_DOWN)) {
+			cube.translate(0, 0, 0.25f * delta);
+		}
 	}
 
 	/**

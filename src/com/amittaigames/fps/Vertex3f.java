@@ -14,6 +14,11 @@ public class Vertex3f {
 		this.z = z;
 	}
 
+	/**
+	 * Convert Vertex3f list to Float array for OpenGL
+	 * @param list List of vertices
+	 * @return Float array for OpenGL
+	 */
 	public static float[] convertList(List<Vertex3f> list) {
 		int length = list.size() * 3;
 		float[] arr = new float[length];
@@ -27,6 +32,12 @@ public class Vertex3f {
 		return arr;
 	}
 
+	/**
+	 * Translates vertex
+	 * @param x How much to translate on the X axis
+	 * @param y How much to translate on the Y axis
+	 * @param z How much to translate on the Z axis
+	 */
 	public void translate(float x, float y, float z) {
 		this.x += x;
 		this.y += y;
